@@ -1,0 +1,15 @@
+# Secrets / local config — never commit
+.env
+*.env
+!*.env.example
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated output
+output/
+
+# OS
+.DS_Store

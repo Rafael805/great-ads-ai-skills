@@ -1,0 +1,16 @@
+{
+  "name": "great-ads-ai-skills",
+  "version": "0.1.0",
+  "description": "Great Ads AI — public marketing skills for Claude Code. Thin clients that run on the Great Ads AI hosted API: connect with ONE Great Ads API key (no AI provider keys of your own) and generate finished, on-brand creatives that land in your pipeline.",
+  "owner": {
+    "name": "Great Marketing AI",
+    "email": "support@greatmarketing.ai"
+  },
+  "plugins": [
+    {
+      "name": "ad-creative",
+      "source": "./plugins/ad-creative",
+      "description": "Ad creative — generate finished static ads (4:5 feed + 9:16 stories) for any brand in your Great Ads AI workspace. The skill writes one on-brand angle + headline, you pick a style, and Great Ads AI renders + saves a Ready-For-Review card. Runs entirely on the Great Ads AI hosted API (our image models, billed to your credits) — you only need one Great Ads API key."
+    }
+  ]
+}

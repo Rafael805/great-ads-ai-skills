@@ -1,0 +1,35 @@
+{
+  "name": "ad-creative",
+  "version": "0.1.0",
+  "description": "Generate finished static ads for a brand in your Great Ads AI workspace. The static-ad skill writes one on-brand angle + headline from your brand's voice, lets you pick a style from your Style Library, and Great Ads AI renders the finished 4:5 + 9:16 ad on its hosted AI and saves it to your pipeline as a Ready-For-Review card. All generation runs on the Great Ads AI hosted API — no AI provider keys of your own, billed to your credits.",
+  "author": {
+    "name": "Great Marketing AI",
+    "email": "support@greatmarketing.ai"
+  },
+  "homepage": "https://www.greatads.io",
+  "keywords": ["ad-creative", "static-ad", "marketing", "facebook-ads", "instagram-ads", "creative"],
+  "connectors": [
+    {
+      "id": "great-ads-api",
+      "type": "env",
+      "description": "Great Ads AI hosted API. The skill reads your brand's voice/styles and renders + saves the finished ad — all on Great Ads AI's servers and AI models, billed to your workspace credits. Generate the key in the Great Ads AI dashboard under Settings → Integrations → Connect to Claude.",
+      "required": true,
+      "vars": [
+        {
+          "key": "GREAT_ADS_INTERNAL_API_KEY",
+          "description": "Your Great Ads AI workspace API key (starts with gaa_live_). The ONLY credential the skill needs.",
+          "required": true
+        },
+        {
+          "key": "GREAT_ADS_INTERNAL_BASE_URL",
+          "description": "Great Ads AI base URL (https://www.greatads.io).",
+          "required": true
+        }
+      ],
+      "skills": ["static-ad"],
+      "setup": {
+        "claude_code": "Add both vars to ~/.config/great-marketing-ai/great-marketing-ai.env (the Connect-to-Claude dialog in the dashboard gives you a ready-to-paste block)."
+      }
+    }
+  ]
+}
