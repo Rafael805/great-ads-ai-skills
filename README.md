@@ -10,6 +10,7 @@ Gemini keys of your own, and nothing to run locally beyond Claude Code.
 | Skill | What it does |
 |---|---|
 | `/static-ad` | Generate a finished static ad (4:5 feed + 9:16 story) for a brand in your workspace — on-brand angle + headline, your style, rendered on Great Ads AI and filed as a Ready-For-Review pipeline card. |
+| `/update-brand` | Update your brand's knowledge — voice, tagline, ICP, words to avoid, and other guardrails the skills read every time they generate an ad. Reads the current brand, applies your change on Great Ads AI, and shows the result. |
 
 More skills will be added here over time.
 

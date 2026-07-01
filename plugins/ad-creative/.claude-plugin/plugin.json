@@ -26,7 +26,7 @@
           "required": true
         }
       ],
-      "skills": ["static-ad"],
+      "skills": ["static-ad", "update-brand"],
       "setup": {
         "claude_code": "Add both vars to ~/.config/great-marketing-ai/great-marketing-ai.env (the Connect-to-Claude dialog in the dashboard gives you a ready-to-paste block)."
       }
