@@ -28,7 +28,7 @@ More skills will be added here over time.
    GREAT_ADS_INTERNAL_API_KEY=gaa_live_…
    GREAT_ADS_INTERNAL_BASE_URL=https://www.greatads.io
    ```
-4. **Use it:** in Claude Code run `/ad-creative:static-ad` and follow the prompts.
+4. **Use it:** in Claude Code run `/static-ad` and follow the prompts.
 
 ## Billing
 
