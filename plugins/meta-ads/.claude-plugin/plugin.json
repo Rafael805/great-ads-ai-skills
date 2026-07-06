@@ -1,0 +1,35 @@
+{
+  "name": "meta-ads",
+  "version": "0.1.0",
+  "description": "Generate direct-response Facebook/Instagram ad copy for a brand in your Great Ads AI workspace — primary text, headlines, and descriptions grounded in that brand's real voice, guardrails, and proven winning patterns. Read-only and free: no credits billed, no AI provider keys of your own.",
+  "author": {
+    "name": "Great Marketing AI",
+    "email": "support@greatmarketing.ai"
+  },
+  "homepage": "https://www.greatads.io",
+  "keywords": ["meta-ads", "ad-copy", "copywriting", "facebook-ads", "instagram-ads", "marketing"],
+  "connectors": [
+    {
+      "id": "great-ads-api",
+      "type": "env",
+      "description": "Great Ads AI hosted API. The skill reads your brand's voice/audience/guardrails so it can write on-brand copy — read-only, free, no credits billed. Generate the key in the Great Ads AI dashboard under Settings → Integrations → Connect to Claude.",
+      "required": true,
+      "vars": [
+        {
+          "key": "GREAT_ADS_INTERNAL_API_KEY",
+          "description": "Your Great Ads AI workspace API key (starts with gaa_live_). A key with the default 'read' scope is enough — the skill never writes or generates.",
+          "required": true
+        },
+        {
+          "key": "GREAT_ADS_INTERNAL_BASE_URL",
+          "description": "Great Ads AI base URL (https://www.greatads.io).",
+          "required": true
+        }
+      ],
+      "skills": ["ad-copy"],
+      "setup": {
+        "claude_code": "Add both vars to ~/.config/great-marketing-ai/great-marketing-ai.env (the Connect-to-Claude dialog in the dashboard gives you a ready-to-paste block)."
+      }
+    }
+  ]
+}

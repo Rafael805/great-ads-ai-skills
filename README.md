@@ -12,16 +12,18 @@ Gemini keys of your own, and nothing to run locally beyond Claude Code.
 | `/static-ad` | Generate a finished static ad (4:5 feed + 9:16 story) for a brand in your workspace — on-brand angle + headline, your style, rendered on Great Ads AI and filed as a Ready-For-Review pipeline card. |
 | `/update-brand` | Update your brand's knowledge — voice, tagline, ICP, words to avoid, and other guardrails the skills read every time they generate an ad. Reads the current brand, applies your change on Great Ads AI, and shows the result. |
 | `/create-style` | Create a reusable style in your Style Library — a saved look (a reusable prompt + optional example images) that `/static-ad` can pick to render ads in that exact look. Asks whether it's for one brand, all your brands, or public. |
+| `/ad-copy` | Write Meta (Facebook/Instagram) ad copy — primary text, headlines, and descriptions — grounded in a brand's real voice, guardrails, and proven winning patterns. Read-only and free: no credits billed. |
 
 More skills will be added here over time.
 
 ## Setup (one key)
 
 1. **Install Claude Code** (if you haven't): `curl -fsSL https://claude.ai/install.sh | bash`
-2. **Add this marketplace and install the plugin:**
+2. **Add this marketplace and install the plugin(s) you want:**
    ```
    claude plugin marketplace add Rafael805/great-ads-ai-skills
    claude plugin install ad-creative@great-ads-ai-skills
+   claude plugin install meta-ads@great-ads-ai-skills
    ```
 3. **Get your key.** In the Great Ads AI dashboard go to **Settings → Integrations →
    Connect to Claude**, generate a key, and copy the ready-made env block into
@@ -30,12 +32,13 @@ More skills will be added here over time.
    GREAT_ADS_INTERNAL_API_KEY=gaa_live_…
    GREAT_ADS_INTERNAL_BASE_URL=https://www.greatads.io
    ```
-4. **Use it:** in Claude Code run `/static-ad` and follow the prompts.
+4. **Use it:** in Claude Code run `/static-ad` or `/ad-copy` and follow the prompts.
 
 ## Billing
 
-Generation runs on Great Ads AI's hosted AI models and is billed to your workspace's
-credits. Manage your balance and top up in the dashboard. Failed renders are auto-refunded.
+`/static-ad` renders on Great Ads AI's hosted AI models and is billed to your workspace's
+credits (failed renders are auto-refunded) — manage your balance and top up in the
+dashboard. `/ad-copy` is read-only text generation and is always free, no credits billed.
 
 ## Privacy
 
